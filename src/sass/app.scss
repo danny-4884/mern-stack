@@ -1,0 +1,10 @@
+body{
+  margin: 0
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(gray, 0.2);
+}

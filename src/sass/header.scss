@@ -1,0 +1,15 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color:rgba(rgb(190, 87, 194), 0.2);
+}
+.activeLink{
+    text-align: center;
+    background-color: #ecb1de;
+    margin-bottom: 81px;
+    overflow: hidden;
+}
+.navLink{
+    padding: 10px;
+    text-align: center;
+}

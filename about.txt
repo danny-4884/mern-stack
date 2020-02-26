@@ -1,0 +1,59 @@
+in this section we add axios to call api's
+
+1) npm install axios --save
+   use : import axios from 'axios';
+
+2) add api.js file and add base url into it 
+  export default axios.create({
+    baseURL: `http://jsonplaceholder.typicode.com/`
+  });
+
+3) then import it and use where we need to call 
+   use : import API from '../api';
+
+4) Application
+
+***for get***
+API.get(`users`)
+      .then(res => {
+        const persons = res.data;
+        this.setState({ persons });
+      })
+
+***for post***
+API.post(`users`, { user })
+    .then(res => {
+    console.log(res);
+    console.log(res.data);
+    })
+
+***for delete***
+API.delete(`users/${this.state.id}`)
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+
+***for CORS***
+allowing CORS for all resources on your server
+  const cors = require('cors');
+  app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+
+
+**********************************************************************************************************
+to persist state of redux store into localstorage
+npm install --save redux-persist
+
+**********************************************************************************************************
+We will learn how to use withRouter() to inject params provided by React Router into connected components deep in the tree without passing them down all the way down as props.
+check LogoutButton component
+
+import { withRouter } from 'react-router';
+
+export default withRouter(componentName);
+
+**********************************************************************************************************
